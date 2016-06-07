@@ -118,7 +118,7 @@ public class Login extends javax.swing.JFrame {
     Administrador admin = new Administrador();
         admin.setUsuario(jTextUser.getText());
         admin.setContraseña(jPasswordPassword.getText());
-        if(admin.getUsuario().equals("admin")&&admin.getContraseña().equals("admin")){
+        if(admin.getUsuario().equals("admin")&&admin.getContraseña().equals("12345")){//campo modificado//
             Inicio index = new Inicio();
             index.setVisible(true);
             this.setVisible(false);
