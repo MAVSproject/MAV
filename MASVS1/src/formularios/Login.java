@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package formularios;
-
+//Agregale un boton con nombre "jButtonSalir!"
 import clases.Administrador;
 import clases.Usuario;
 import javax.swing.JOptionPane;
@@ -118,23 +118,23 @@ public class Login extends javax.swing.JFrame {
     Administrador admin = new Administrador();
         admin.setUsuario(jTextUser.getText());
         admin.setContraseña(jPasswordPassword.getText());
-        if(admin.getUsuario().equals("admin")&&admin.getContraseña().equals("12345")){//campo modificado//
+        if(admin.getUsuario().equals("VictorCoca")&&admin.getContraseña().equals("zelda")){
             Inicio index = new Inicio();
             index.setVisible(true);
             this.setVisible(false);
         
         }
         else if(admin.getUsuario().isEmpty()){
-        JOptionPane.showMessageDialog(null, "Ingrese nombre de usuario");
+        JOptionPane.showMessageDialog(null, "Campo usuario vacío, porfavor ingrese su usuario");
         
         }
         else if(admin.getContraseña().isEmpty()){
-        JOptionPane.showMessageDialog(null, "Ingrese contraseña");
+        JOptionPane.showMessageDialog(null, "Campo contraseña vacío, porfavor ingrese su contraseña");
         
         jPasswordPassword.setText("");
         }
         else{
-        JOptionPane.showMessageDialog(null, "Usuario o contraseña incorrecto!");
+        JOptionPane.showMessageDialog(null, "Usuario o contraseña incorrecto!!!");
         jTextUser.setText("");
         jPasswordPassword.setText("");
         }
@@ -147,7 +147,12 @@ public class Login extends javax.swing.JFrame {
         validar();
         
     }//GEN-LAST:event_jButtonIngresarMouseClicked
-
+    
+    private void jButtonSalirMouseClicked(java.awt.event.MouseEvente evt){
+        System.exit(0);
+        
+    }
+    
     /**
      * @param args the command line arguments
      */
